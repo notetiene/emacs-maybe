@@ -1,0 +1,32 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Emacs
+GenericName=Text Editor
+Comment=Edit text
+Icon=emacs
+Exec=emacs_maybe.sh %F
+NoDisplay=false
+Categories=Development;TextEditor;
+Keywords=Text;Editor;
+MimeType=MimeType=text/english;text/plain;text/x-makefile;text/x-c++hdr;text/x-c++src;text/x-chdr;text/x-csrc;text/x-java;text/x-moc;text/x-pascal;text/x-tcl;text/x-tex;application/x-shellscript;text/x-c;text/x-c++;
+StartupWMClass=Emacs
+StartupNotify=true
+Terminal=false
+
+Actions=NewShortcut;NewShortcut1;NewShortcut2;
+
+[Desktop Action NewShortcut]
+Name=Start with no Init
+Exec=emacs -Q
+OnlyShowIn=Unity
+
+[Desktop Action NewShortcut1]
+Name=Start with debug-init
+Exec=emacs --debug-init
+OnlyShowIn=Unity
+
+[Desktop Action NewShortcut2]
+Name=Kill server
+Exec=emacsclient -e '(kill-emacs)'
+OnlyShowIn=Unity
